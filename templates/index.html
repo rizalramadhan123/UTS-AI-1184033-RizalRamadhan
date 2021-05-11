@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+     <style>
+     table {
+       font-family: arial, sans-serif;
+       border-collapse: collapse;
+       width: 100%;
+     }
+
+     td, th {
+       border: 1px solid #dddddd;
+       text-align: left;
+       padding: 8px;
+     }
+
+     tr:nth-child(even) {
+       background-color: #dddddd;
+     }
+     </style>
+</head>
+
+<body>
+ <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-6 col-md-7">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Berikut Hasil Sentimen Analysis dari youtube Anda:</h1>
+                                    </div>
+                                        <table class="responsive">
+                                              <tr>
+                                                <td>5 komentar teratas</td>
+                                             </tr>
+                                             <tr>
+                                                <td>{{filtered_comments}}</td>
+                                             </tr>
+                                        </table>
+
+                                        <table class="responsive">
+                                             <tr>
+                                               <th>komentar positif</th>
+                                               <th>komentar netral</th>
+                                               <th>komentar negatif</th>
+                                               <th>total komentar</th>
+                                             </tr>
+                                             <tr>
+                                               <td>{{positivetotal}}</td>
+                                               <td>{{neutral}}</td>
+                                               <td>{{negativetotal}}</td>
+                                               <td>{{limit}}</td>
+                                             </tr>
+
+                                        </table>
+                                        <a class="btn btn-success col-md-12" href="/" role="button">KEMBALI</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>   
+
+</body>
+</html>
